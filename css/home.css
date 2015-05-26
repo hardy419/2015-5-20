@@ -115,6 +115,7 @@ h2.eng {
 /* contents */
 .contents {
   width:800px;
+  min-height:376px;
   float:right;
   margin-top: 20px;
   margin-bottom: 11px;
@@ -132,7 +133,7 @@ h2.eng {
   padding-bottom: 20px;
 }
 .exhibition-intro .english-div h2 {
-  padding-bottom: 18px;
+  padding-bottom: 20px;
 }
 .exhibition-intro .chinese-div {
   width: 280px;
@@ -147,6 +148,9 @@ h2.eng {
   float: right;
 }
 .exhibition-intro .english-div p {
+}
+.exhibition-intro td {
+  vertical-align: top;
 }
 
 /* footer */
