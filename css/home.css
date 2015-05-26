@@ -4,14 +4,30 @@ body {
 p {
   margin:0;
   padding:0;
+}
+p.chi {
   font-size: 14px;
   font-weight: bold;
-  font-family: "PMingLiU", "arial", "SimSun";
+  font-family: "PMingLiU", "SimSun";
 }
-.title-txt {
+p.eng {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "arial";
+}
+h2.chi {
+  margin:0;
   font-size: 20px;
   font-weight: 800;
   color: rgb(230,70,53);
+  font-family: "PMingLiU", "SimSun";
+}
+h2.eng {
+  margin:0;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(230,70,53);
+  font-family: "arial";
 }
 
 /* container */
@@ -26,10 +42,36 @@ p {
   width:965px;
   margin:auto;
 }
+.header>img {
+  margin:auto; position:relative;left:310px;
+}
+
 .header-pics {
   width:1000px;
   margin:50px auto 40px;
 }
+.header-pics>img:first-child {
+  margin-bottom:40px;
+}
+.header-pics>img:first-child+img {
+  margin-left:0px;
+}
+.header-pics>img:first-child+img+img {
+  margin-left:0px;margin-bottom:20px;
+}
+.header-pics>img:first-child+img+img+img {
+  width:220px;
+}
+.header-pics>img:first-child+img+img+img+img {
+  margin-left:0px;margin-bottom:5px;
+}
+.header-pics>img:first-child+img+img+img+img+img {
+  margin-left:20px;margin-bottom:15px;
+}
+.header-pics>img:first-child+img+img+img+img+img+img {
+  margin-left:20px;margin-bottom:10px;
+}
+
 .title-img {
   margin:auto auto 20px;
 }
@@ -48,7 +90,7 @@ p {
   padding: 9px 9px 0;
 }
 .menu-left>div>p:first-child+p {
-  padding: 6px 9px 9px;
+  padding: 5px 9px 9px;
 }
 .menu-left p {
   color: #fff;
@@ -81,13 +123,15 @@ p {
   opacity:0.8;
   background-color:#fff;
 }
+
+/* exhibition-intro */
 .exhibition-intro p {
   line-height: 1.3;
 }
-.exhibition-intro .chinese-div .title-txt {
+.exhibition-intro .chinese-div h2 {
   padding-bottom: 20px;
 }
-.exhibition-intro .english-div .title-txt {
+.exhibition-intro .english-div h2 {
   padding-bottom: 18px;
 }
 .exhibition-intro .chinese-div {
@@ -106,8 +150,13 @@ p {
 }
 
 /* footer */
-.footer {
+.footer-chi {
   font-size:10px;
-  font-family: "PMingLiU", "arial", "SimSun";
+  font-family: "PMingLiU", "SimSun";
+  text-align:right;
+}
+.footer-eng {
+  font-size:10px;
+  font-family: "arial";
   text-align:right;
 }
