@@ -29,6 +29,10 @@ h2.eng {
   color: rgb(230,70,53);
   font-family: "arial";
 }
+ul {
+  list-style: outside none none;
+  padding: 0;
+}
 
 .img-li {
   overflow: hidden;
@@ -191,6 +195,33 @@ h2.eng {
   width: 140px;
   height: 140px;
   margin-right: 15px;
+}
+
+/* sidelights */
+.sidelights {
+  width: 780px;
+  padding: 20px 0 20px 20px;
+}
+.sidelights>div:first-child {
+  width: 312px;
+  float: left;
+}
+.sidelights>div:first-child+div {
+  width: 468px;
+  float: left;
+}
+
+.sidelights>ul {
+  margin-top: 20px;
+}
+.sidelights>ul li {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left;
+}
+.sidelights>ul li img {
+  width: 136px;
+  height: 136px;
 }
 
 /* footer */
