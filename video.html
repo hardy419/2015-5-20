@@ -4,6 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>SSSE</title>
 <link media="screen" type="text/css" rel="stylesheet" href="css/home.css"></link>
+<link media="screen" type="text/css" rel="stylesheet" href="js/video-js/video-js.css"></link>
+<link media="screen" type="text/css" rel="stylesheet" href="css/lightbox.css"></link>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/video-js/video.js"></script>
+<script src="js/lightbox.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -39,73 +44,35 @@
         <p class="chi">展覽花絮</p><p class="eng">Exhibition sidelights</p>
       </div>
       <div class="menu-item-red height-50" id="menu-id7" onclick="window.location.href='session.html';">
-        <p class="chi">學生分享會</p><p class="eng">Students’ sharing session</p>
+        <p class="chi">學生分享會</p><p class="eng">Students' sharing session</p>
       </div>
     </div>
     <div class="contents">
-      <div class="exhibition-intro">
-        <div class="chinese-div">
-          <h2 class="chi">序言</h2>
-          <p class="chi">「高中學生視覺藝術作品集展覽」由教育局
-藝術教育組舉辦，目的是透過展示高中學生
-的視覺藝術作品集，以支援高中視覺藝術科
-課程及評估的推行，並為學生及教師提供互
-動學習的機會。今年，我們首次邀請全港中
-學參與，參加者均為應考2014年香港中學文
-憑試視覺藝術科的學生。</p>
-          <p class="chi">&nbsp;</p>
-          <p class="chi">是次展出二十個涵蓋不同形式藝術創作的作
-品集。評審團按作品集是否能展示學生真實
-的探究過程，以及香港中學文憑試視覺藝術
-科的評核準則等範疇，選出獲獎及展出的作
-品集。本年度評審團由視覺藝術教育專業人
-士組成，包括楊懷俸先生、劉仲嚴博士、梁
-海勇先生、陳美珍女士，以及藝術教育組代
-表。</p>
-          <p class="chi">&nbsp;</p>
-          <p class="chi">展覽包括研究工作簿複製本和作品集中部分
-完成作品。場內亦播放由參展學生介紹其作
-品集的錄影片段。我們衷心多謝各位評判，
-以及所有參加的學校、教師和學生的熱心支
-持。我們期望能為提升高中視覺藝術科課程
-及評估，繼續共勉。</p>
-          <p class="chi">&nbsp;</p>
-          <p class="chi">&nbsp;</p>
-          <p class="chi">教育局藝術教育組</p>
+      <div class="video">
+        <div>
+          <h2 class="chi">學生錄影訪問</h2>
         </div>
-        <div class="english-div">
-          <h2 class="eng">Preface</h2>
-          <p class="eng">The “Exhibition of Senior Secondary School Students’ Visual Arts
-Portfolios” is organised by the Arts Education Section of the
-Education Bureau. It aims to support the implementation of the
-senior secondary (SS) Visual Arts curriculum and assessment
-through displaying SS students’ visual arts portfolios; as well as to
-promote student-teacher interactive learning. This is the first time
-that all secondary schools were invited for participation. The
-participants of the exhibition were students who sat for Visual Arts in
-the 2014 Hong Kong Diploma of Secondary Education Examination.</p>
-          <p class="eng">&nbsp;</p>
-          <p class="eng">20 portfolios with a variety of art forms, illustrating the authentic
-progress of work basing on the assessment criteria of the Visual
-Arts School-based Assessment of HKDSE were selected by a
-judging panel for award and display. The panel was composed of
-visual arts education professionals, including Mr. YEUNG Wai-fung,
-Dr. LAU Chung-yim, Mr. LEUNG Hoi-yung, Ms CHAN Mei-chuen,
-and representatives of the Arts Education Section.</p>
-          <p class="eng">&nbsp;</p>
-          <p class="eng">On display are the reproductions of the participants’ research
-workbook and selected art pieces from the portfolios. Video
-clippings of students introducing their works are also on show for
-sharing. Our gratitude is expressed to the judges, as well as the
-participating schools, teachers and students for their enthusiastic
-participation. We hope that we will continue to work together for
-enhancing the learning and teaching effectiveness of the SS Visual
-Arts curriculum and assessment.</p>
-          <p class="eng">&nbsp;</p>
-          <p class="eng">&nbsp;</p>
-          <p class="eng">Arts Education Section, Education Bureau</p>
+        <div>
+          <h2 class="eng">Students’ video interview</h2>
         </div>
         <div style="clear:both"></div>
+        <div class="video-div">
+          <table>
+            <tr>
+              <td><a href="javascript:slide($('#video-u'),1)"><img src="img/left-arrow.png"></img></a></td>
+              <td><a href="javascript:slide($('#video-u'),0)"><img src="img/right-arrow.png"></img></a></td>
+              <td>
+                <div class="img-li">
+                  <ul class="slide-left" id="video-u" uw="369">
+                    <li><a href="javascript:js_op('img/students/余美儀/Interview/09-ymy.mp4',720,576)"><img src="img/students/余美儀/Interview/Screen Shot 2015-04-18 at 1.21.03 pm.png"></img></a></li>
+                    <li><a href="javascript:js_op('img/students/蘇詠怡/Interview/So Wing Yi2.mp4',1280,720)"><img src="img/students/蘇詠怡/Interview/Screen Shot 2015-04-18 at 1.28.43 pm.png"></img></a></li>
+                    <li><a href="img/students/文匡/Interview/06-mh.mp4" data-lightbox="videos"><img src="img/students/文匡/Interview/Screen Shot 2015-04-20 at 10.27.52 am.png"></img></a></li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
     <div style="clear:both"></div>
@@ -114,5 +81,81 @@ Arts curriculum and assessment.</p>
       <p class="footer-chi">2015 &copy; 本網頁版權屬香港特別行政區教育局所有。</p>
     </div>
   </div>
+
+<div id="TB_window" style="position:absolute; top:50%; left:50%; width: 720px;height: 576px; margin-left:-360px;margin-top:-290px; display: none;z-index:2147483647">
+  <video id="popup-video" class="video-js vjs-default-skin" controls preload="auto">
+    <source src="" type='video/mp4' />
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+  </video>
+</div>
+<div id="TB_mask" style="filter:alpha(opacity=30);-moz-opacity:0.5;opacity:0.5;background-color:#000000;position:absolute;left:0px;top:0px;width:100%;height:300%;z-index:2147483646;display:none" onclick="js_op_close(false)"></div>
+
+<script>
+$(document).ready(function (){
+  $(".slide-right").each(function(){var linum=$(this).find("li").length;var width=parseInt($(this).attr("uw"));var w=width*linum;$(this).css("width",w+"px").css("left",(width-w)+"px");});$(".slide-left").each(function(){var linum=$(this).find("li").length;var width=parseInt($(this).attr("uw"));var w=width*linum;$(this).css("width",w+"px").css("left","0px");});setTimeout(autoplay,5E3);
+  $(".product-description").each(function(){
+    var txt=$(this).text();
+    $(this).html(txt.substr(0,90)+"......");
+  });
+});
+function slide(obj,dir){
+  var linum=obj.find("li").length;
+  var width=parseInt(obj.attr("uw"));
+  var w=width*linum;
+  var ml=parseInt(obj.css("left"));
+  ml-=ml%width;
+  if(0===dir){
+    if(0===ml){
+      obj.animate({left:(width-w)+"px"},"slow");
+    }
+    else{
+      obj.animate({left:(ml+width)+"px"},"slow");
+    }
+  }
+  else{
+    if(width-w==ml){
+      obj.animate({left:"0px"},"slow");
+    }
+    else{
+      obj.animate({left:(ml-width)+"px"},"slow");
+    }
+  }
+}
+function autoplay(){
+  $(".slide-right").each(function(){slide($(this),0)});$(".slide-left").each(function(){slide($(this),1)});
+  setTimeout(autoplay,5E3);
+}
+</script>
+
+<script>
+function js_op_close(reload){
+	var player=videojs('popup-video');
+	player.pause();
+	$("#TB_mask").css("display",'none');
+	$("#TB_window").css("display",'none');
+	$("#TB_window2").css("display",'none');
+	if(reload){
+		location.reload();
+	}
+}
+function js_op(url,w,h){
+	$("#TB_mask").css("display",'block');
+	var player=videojs('popup-video');
+	player.src({ type: "video/mp4", src: url });
+  videojs("popup-video", {}, function(){
+	// Player (this) is initialized and ready.
+    $("#TB_window").css("width",w+"px");
+    $("#TB_window").css("height",h+"px");
+    $("#TB_window").css("margin-left",(-w/2)+"px");
+    $("#TB_window").css("margin-top",(-h/2)+"px");
+    $(".video-js").css("width",w+"px");
+    $(".video-js").css("height",h+"px");
+	$(".vjs-big-play-button").css("margin","auto");
+	$(".vjs-big-play-button").css("top",((h-84)/2)+"px");
+	$(".vjs-big-play-button").css("position","relative");
+  });
+	$("#TB_window").css("display",'block');
+}
+</script>
 </body>
 </html>

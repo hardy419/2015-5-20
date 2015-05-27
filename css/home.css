@@ -224,6 +224,44 @@ ul {
   height: 136px;
 }
 
+/* video */
+.video {
+  width: 760px;
+  padding: 20px;
+}
+.video>div:first-child {
+  width: 300px;
+  float: left;
+}
+.video>div:first-child+div {
+  width: 460px;
+  float: left;
+}
+.video-div a img {
+  width: 21px;
+  height: 129px;
+  margin: auto;
+}
+.video-div tr>td:first-child+td a {
+  position:absolute;
+  left: 1288px;
+  top: 400px;
+}
+.video-div .img-li {
+  width: 718px;
+  position: relative;
+  left: -10px;
+}
+.video-div li {
+  width: 369px;
+  height: 196px;
+  margin-right: 0;
+}
+.video-div li img {
+  width: 349px;
+  height: 196px;
+}
+
 /* footer */
 .footer-chi {
   font-size:10px;
