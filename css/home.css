@@ -15,6 +15,12 @@ p.eng {
   font-weight: 600;
   font-family: "arial";
 }
+p.grey {
+  color: grey;
+}
+p.lh {
+  line-height: 1.5;
+}
 h2.chi {
   margin:0;
   font-size: 20px;
@@ -278,22 +284,105 @@ ul {
   height: 280px;
   margin-right: 0;
 }
-.img-frame {
+.work-div .img-frame {
   width: 260px;
   height: 280px;
   background-color:#fff;
 }
-.img-frame a div {
+.work-div .img-frame a div {
   width: 230px;
   height: 230px;
   padding: 15px;
 }
-.work-info-div {
+.work-div .work-info-div {
   width: 230px;
   height: 17px;
   margin: 0px 15px 0px 15px;
   position: relative;
   top: -5px;
+}
+
+/* student */
+.student {
+  padding: 20px;
+}
+.student h2 {
+  line-height: 1.4;
+}
+.student .left-div {
+  width: 290px;
+  margin-right: 20px;
+  float: left;
+}
+.student .right-div {
+  width: 450px;
+  float: right;
+}
+
+h3 {
+  line-height: 1.2;
+}
+h3.chi {
+  margin:0;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "PMingLiU", "SimSun";
+}
+h3.eng {
+  margin:0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "arial";
+}
+
+.right-div ul {
+  margin: 10px auto 20px;
+  padding: 0;
+  list-style: outside none none;
+}
+
+.right-div .student-work-u li {
+  width: 105px;
+  height: 105px;
+  float: left;
+  background-color: #fff;
+}
+.right-div .student-work-u li:first-child {
+  margin-right: 10px;
+}
+.right-div .student-work-u li:first-child+li {
+  margin-right: 10px;
+}
+.right-div .student-work-u li:first-child+li+li {
+  margin-right: 10px;
+}
+
+.right-div .student-workbook-u li {
+  width: 140px;
+  height: 140px;
+  float: left;
+  background-color: #fff;
+}
+.right-div .student-workbook-u li:first-child {
+  margin-right: 15px;
+}
+.right-div .student-workbook-u li:first-child+li {
+  margin-right: 15px;
+}
+.right-div .student-workbook-u li:first-child+li+li~li {
+  display: none;
+}
+
+.right-div .student-video-div {
+  margin-top: 10px;
+}
+.right-div .student-video-div img {
+  width: 295px;
+  height: 165px;
+}
+
+.lb-details p {
+  color: #000;
 }
 
 /* footer */
