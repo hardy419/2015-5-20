@@ -27,8 +27,8 @@
       return "Image " + curImageNum + " of " + albumSize;
     };
     //Hardy 2015-5-28
-    LightboxOptions.prototype.albumWorkLabel = function(idx,name,media) {
-      return '<table border="0" cellspacing="0" cellpadding="0" style="position:relative;left:20px"><tr><td width="100"><p class="chi">作品' + idx + '</p></td><td width="100"><p class="chi">(名稱)</p></td><td width="80"><p class="chi">' + name + '</p></td><td width="100"><p class="chi">(媒介)</p></td><td width="300"><p class="chi">' + media + '</p></td></tr><tr><td><p class="eng">Artwork ' + idx + '</p></td><td><p class="chi">(Title)</p></td><td><p class="chi"></p></td><td><p class="chi">(Medium)</p></td><td><p class="chi"></p></td></tr></table>';
+    LightboxOptions.prototype.albumWorkLabel = function(idx,name,media,name_e,media_e) {
+      return '<table border="0" cellspacing="0" cellpadding="0" style="position:relative;left:20px"><tr><td width="100"><p class="chi">作品' + idx + '</p></td><td width="100"><p class="chi">(名稱)</p></td><td width="80"><p class="chi">' + name + '</p></td><td width="100"><p class="chi">(媒介)</p></td><td width="300"><p class="chi">' + media + '</p></td></tr><tr><td><p class="eng">Artwork ' + idx + '</p></td><td><p class="eng">(Title)</p></td><td><p class="eng">' + name_e + '</p></td><td><p class="eng">(Medium)</p></td><td><p class="eng">' + media_e + '</p></td></tr></table>';
     };
     LightboxOptions.prototype.albumWorkbookLabel = function(curImageNum, albumSize) {
       return '<p class="eng" style="position:relative;left:20px">頁 Page ' + curImageNum + '/' + albumSize + '</p>';
@@ -149,7 +149,9 @@
           data: $link.attr('data-lightbox') || null,
           idx: $link.attr('idx') || null,
           name: $link.attr('name') || null,
-          media: $link.attr('media') || null
+          media: $link.attr('media') || null,
+          name_e: $link.attr('name-e') || '',
+          media_e: $link.attr('media-e') || ''
         });
       }
 
@@ -361,7 +363,7 @@
           this.$lightbox.find('.lb-number').text(this.options.albumLabel(this.currentImageIndex + 1, this.album.length)).fadeIn('fast');
         }
         else{
-          this.$lightbox.find('.lb-number').html(this.options.albumWorkLabel(this.album[this.currentImageIndex].idx,this.album[this.currentImageIndex].name,this.album[this.currentImageIndex].media)).fadeIn('fast');
+          this.$lightbox.find('.lb-number').html(this.options.albumWorkLabel(this.album[this.currentImageIndex].idx,this.album[this.currentImageIndex].name,this.album[this.currentImageIndex].media,this.album[this.currentImageIndex].name_e,this.album[this.currentImageIndex].media_e)).fadeIn('fast');
         }
       } else {
         this.$lightbox.find('.lb-number').hide();

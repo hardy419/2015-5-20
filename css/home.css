@@ -191,10 +191,11 @@ ul {
   padding-bottom: 20px;
 }
 .sharing-session table {
-  border: 2px solid #8aa;
+  border: 1px solid #8aa;
 }
 .sharing-session table tr td {
   vertical-align: top;
+  border: 1px solid #8aa;
 }
 .sharing-session table tr:first-child {
   text-align: center;
@@ -248,6 +249,9 @@ ul {
 .video>div:first-child+div {
   width: 460px;
   float: left;
+}
+.video-div {
+  margin-top: 30px;
 }
 .video-div a img {
   width: 21px;
@@ -419,20 +423,21 @@ h3.eng {
   padding: 20px;
 }
 .students-schools table {
-  border: 2px solid #8aa;
+  border: 1px solid #8aa;
 }
 .students-schools table tr td {
   vertical-align: top;
+  border: 1px solid #8aa;
 }
 
 /* footer */
 .footer-chi {
-  font-size:10px;
+  font-size:11px;
   font-family: "PMingLiU", "SimSun";
   text-align:right;
 }
 .footer-eng {
-  font-size:10px;
+  font-size:11px;
   font-family: "arial";
   text-align:right;
 }
