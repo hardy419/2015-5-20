@@ -18,6 +18,9 @@ p.eng {
 p.grey {
   color: grey;
 }
+p.table-head {
+  color: rgb(230,70,53);
+}
 p.lh {
   line-height: 1.5;
 }
@@ -409,6 +412,17 @@ h3.eng {
   vertical-align: top;
   word-break: keep-all;
   white-space: nowrap;
+}
+
+/* schools students */
+.students-schools {
+  padding: 20px;
+}
+.students-schools table {
+  border: 2px solid #8aa;
+}
+.students-schools table tr td {
+  vertical-align: top;
 }
 
 /* footer */
