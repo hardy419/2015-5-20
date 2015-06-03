@@ -117,15 +117,19 @@ function slide(obj,dir){
   ml-=ml%width;
   if(0===dir){
     if(0===ml){
-      obj.animate({left:(width-w)+"px"},"slow");
+      obj.find("li").last().insertBefore(obj.find("li").first());
+      obj.css("left",(ml-width)+"px");
+      obj.animate({left:ml+"px"},"slow");
     }
     else{
       obj.animate({left:(ml+width)+"px"},"slow");
     }
   }
   else{
-    if(width-w==ml){
-      obj.animate({left:"0px"},"slow");
+    if(2*width-w==ml){
+      obj.find("li").first().insertAfter(obj.find("li").last());
+      obj.css("left",(ml+width)+"px");
+      obj.animate({left:ml+"px"},"slow");
     }
     else{
       obj.animate({left:(ml-width)+"px"},"slow");
