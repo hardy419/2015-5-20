@@ -28,7 +28,12 @@
     };
     //Hardy 2015-5-28
     LightboxOptions.prototype.albumWorkLabel = function(idx,name,media,name_e,media_e) {
-      return '<table border="0" cellspacing="0" cellpadding="0" style="position:relative;left:20px"><tr><td width="100"><p class="chi">作品' + idx + '</p></td><td width="100"><p class="chi">(名稱)</p></td><td width="80"><p class="chi">' + name + '</p></td><td width="100"><p class="chi">(媒介)</p></td><td width="300"><p class="chi">' + media + '</p></td></tr><tr><td><p class="eng">Artwork ' + idx + '</p></td><td><p class="eng">(Title)</p></td><td><p class="eng">' + name_e + '</p></td><td><p class="eng">(Medium)</p></td><td><p class="eng">' + media_e + '</p></td></tr></table>';
+      if(''==name_e){
+        return '<table border="0" cellspacing="0" cellpadding="0" style="position:relative;left:20px"><tr><td width="100"><p class="chi">作品' + idx + '</p></td><td width="50"><p class="chi">(名稱)</p></td><td width="150"><p class="chi" style="color:rgb(214,99,87);padding-right:10px">' + name + '</p></td><td width="50"><p class="chi">(媒介)</p></td><td width="150"><p class="chi" style="color:rgb(15,92,93)">' + media + '</p></td></tr></table>';
+      }
+      else{
+        return '<table border="0" cellspacing="0" cellpadding="0" style="position:relative;left:20px"><tr><td width="100"><p class="eng">Artwork ' + idx + '</p></td><td width="50"><p class="eng">(Title)</p></td><td width="150"><p class="eng" style="color:rgb(214,99,87);padding-right:10px">' + name_e + '</p></td><td width="80"><p class="eng">(Medium)</p></td><td width="150"><p class="eng" style="color:rgb(15,92,93)">' + media_e + '</p></td></tr></table>';
+      }
     };
     LightboxOptions.prototype.albumWorkbookLabel = function(curImageNum, albumSize) {
       return '<p class="eng" style="position:relative;left:20px">頁 Page ' + curImageNum + '/' + albumSize + '</p>';
