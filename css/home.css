@@ -324,6 +324,9 @@ ul {
   margin-right: 30px;
   float: left;
 }
+.student .left-div .eng {
+  text-align: justify;
+}
 .student .right-div {
   width: 450px;
   float: right;
