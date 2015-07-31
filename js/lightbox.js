@@ -11,6 +11,9 @@
   // Use local alias
   var $ = jQuery;
 
+  //Hardy 2015-7-30
+  var hextension = 50;
+
   var LightboxOptions = (function() {
     function LightboxOptions() {
       this.fadeDuration                = 500;
@@ -28,11 +31,17 @@
     };
     //Hardy 2015-5-28
     LightboxOptions.prototype.albumWorkLabel = function(idx,name,media,name_e,media_e) {
-      if(''==name_e){
-        return '<table border="0" cellspacing="0" cellpadding="0" style="position:relative;left:20px"><tr><td width="100"><p class="chi">作品' + idx + '</p></td><td width="50"><p class="chi">(名稱)</p></td><td width="150"><p class="chi" style="color:rgb(214,99,87);padding-right:10px">' + name + '</p></td><td width="50"><p class="chi">(媒介)</p></td><td width="150"><p class="chi" style="color:rgb(15,92,93)">' + media + '</p></td></tr></table>';
+      if(parseInt($('.lb-outerContainer').css('width'))>900){
+        var media_w=300;
       }
       else{
-        return '<table border="0" cellspacing="0" cellpadding="0" style="position:relative;left:20px"><tr><td width="100"><p class="eng">Artwork ' + idx + '</p></td><td width="50"><p class="eng">(Title)</p></td><td width="150"><p class="eng" style="color:rgb(214,99,87);padding-right:10px">' + name_e + '</p></td><td width="80"><p class="eng">(Medium)</p></td><td width="150"><p class="eng" style="color:rgb(15,92,93)">' + media_e + '</p></td></tr></table>';
+        var media_w=160;
+      }
+      if(''==name_e){
+        return '<table border="0" cellspacing="0" cellpadding="0" style="position:relative;left:20px"><tr><td width="100"><p class="chi">作品' + idx + '</p></td><td width="50"><p class="chi">(名稱)</p></td><td width="' + media_w + '"><p class="chi" style="color:rgb(214,99,87);padding-right:10px">' + name + '</p></td><td width="50"><p class="chi">(媒介)</p></td><td width="' + media_w + '"><p class="chi" style="color:rgb(15,92,93)">' + media + '</p></td></tr></table>';
+      }
+      else{
+        return '<table border="0" cellspacing="0" cellpadding="0" style="position:relative;left:20px"><tr><td width="100"><p class="eng">Artwork ' + idx + '</p></td><td width="50"><p class="eng">(Title)</p></td><td width="' + media_w + '"><p class="eng" style="color:rgb(214,99,87);padding-right:10px">' + name_e + '</p></td><td width="80"><p class="eng">(Medium)</p></td><td width="' + media_w + '"><p class="eng" style="color:rgb(15,92,93)">' + media_e + '</p></td></tr></table>';
       }
     };
     LightboxOptions.prototype.albumWorkbookLabel = function(curImageNum, albumSize) {
@@ -153,8 +162,8 @@
           // Hardy 2015-5-28
           data: $link.attr('data-lightbox') || null,
           idx: $link.attr('idx') || null,
-          name: $link.attr('name') || null,
-          media: $link.attr('media') || null,
+          name: $link.attr('name') || '',
+          media: $link.attr('media') || '',
           name_e: $link.attr('name-e') || '',
           media_e: $link.attr('media-e') || ''
         });
@@ -202,6 +211,14 @@
     // Hide most UI elements in preparation for the animated resizing of the lightbox.
     Lightbox.prototype.changeImage = function(imageNumber) {
       var self = this;
+
+      //Hardy 2015-7-30
+      if(self.album[imageNumber].name.length>10 || self.album[imageNumber].media.length>10 || self.album[imageNumber].name_e.length>30 || self.album[imageNumber].media_e.length>30){
+        hextension = 70;
+      }
+      else{
+        hextension = 50;
+      }
 
       this.disableKeyboardNav();
       var $image = this.$lightbox.find('.lb-image');
@@ -287,7 +304,7 @@
           width: newWidth,
           //Hardy 2015-5-28
           //height: newHeight
-          height: newHeight+50
+          height: newHeight+hextension
         }, this.options.resizeDuration, 'swing', function() {
           postResize();
         });

@@ -327,6 +327,9 @@ ul {
 .student .left-div .eng {
   text-align: justify;
 }
+.student .left-div .chi {
+  text-align: justify;
+}
 .student .right-div {
   width: 450px;
   float: right;
@@ -418,7 +421,7 @@ h3.eng {
 .lb-details td {
   vertical-align: top;
   word-break: keep-all;
-  white-space: nowrap;
+/*  white-space: nowrap;*/
 }
 
 /* schools students */
