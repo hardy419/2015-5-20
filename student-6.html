@@ -71,7 +71,7 @@
             <li lsrc="img/students/羅筱柔/Images of 4 artworks/Law Siu Yau_'Fake'_Page_1.jpg"><a href="img/students/羅筱柔/Images of 4 artworks/Law Siu Yau_'Fake'_Page_1.jpg" data-lightbox="student-work" idx="1" name="說謊兔" media="混合媒介"><div class="img-frame"><div></div></div></a></li>
             <li lsrc="img/students/羅筱柔/Images of 4 artworks/Law Siu Yau_'Fake'_Page_2.jpg"><a href="img/students/羅筱柔/Images of 4 artworks/Law Siu Yau_'Fake'_Page_2.jpg" data-lightbox="student-work" idx="2" name="說謊的世界" media="壁畫"><div class="img-frame"><div></div></div></a></li>
             <li lsrc="img/students/羅筱柔/Images of 4 artworks/Law Siu Yau_'Fake'_Page_3.jpg"><a href="img/students/羅筱柔/Images of 4 artworks/Law Siu Yau_'Fake'_Page_3.jpg" data-lightbox="student-work" idx="3" name="說謊·童話" media="木板塑膠彩"><div class="img-frame"><div></div></div></a></li>
-            <li lsrc="img/students/羅筱柔/Images of 4 artworks/Law Siu Yau_'Fake - Apate'_Artwork_4.png"><a href="javascript:js_op('img/students/羅筱柔/Images of 4 artworks/Law Siu Yau_Fake - Apate_Artwork_4.mp4',1280,720)"><div class="img-frame"><div></div></div></a></li>
+            <li lsrc="img/students/羅筱柔/Images of 4 artworks/Law Siu Yau_'Fake - Apate'_Artwork_4.png"><a href="javascript:js_op('img/students/羅筱柔/Images of 4 artworks/Law Siu Yau_Fake - Apate_Artwork_4.mp4',1280,720);$('#TB_window_bg').css('display','block');"><div class="img-frame"><div></div></div></a></li>
             <div style="clear:both"></div>
           </ul>
           <h3 class="chi">研究工作簿</h3><h3 class="eng">Research workbook</h3>
@@ -111,7 +111,10 @@
     <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
   </video>
 </div>
-<div id="TB_mask" style="filter:alpha(opacity=30);-moz-opacity:0.5;opacity:0.5;background-color:#000000;position:absolute;left:0px;top:0px;width:100%;height:300%;z-index:2147483646;display:none" onclick="js_op_close(false)"></div>
+<div id="TB_window_bg" style="position:absolute; top:50%; left:50%; width: 1280px;height: 770px; margin-left:-640px;margin-top:-360px; display: none;z-index:2147483646; background-color:#fff">
+<table border="0" cellspacing="0" cellpadding="0" style="position:relative;left:20px;top:730px"><tr><td width="100"><p class="chi">作品4</p></td><td width="50"><p class="chi">(名稱)</p></td><td width="300"><p class="chi" style="color:rgb(214,99,87);padding-right:10px">謊話 + 成長</p></td><td width="50"><p class="chi">(媒介)</p></td><td width="300"><p class="chi" style="color:rgb(15,92,93)">定格動畫</p></td></tr></table>
+</div>
+<div id="TB_mask" style="filter:alpha(opacity=30);-moz-opacity:0.5;opacity:0.5;background-color:#000000;position:absolute;left:0px;top:0px;width:100%;height:300%;z-index:2147483645;display:none" onclick="js_op_close(false)"></div>
 
 <script>
 function js_op_close(reload){
@@ -120,6 +123,7 @@ function js_op_close(reload){
  $("#TB_mask").css("display",'none');
  $("#TB_window").css("display",'none');
  $("#TB_window2").css("display",'none');
+ $('#TB_window_bg').css('display','none');
  if(reload){
   location.reload();
  }
