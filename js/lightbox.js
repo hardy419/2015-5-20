@@ -212,14 +212,6 @@
     Lightbox.prototype.changeImage = function(imageNumber) {
       var self = this;
 
-      //Hardy 2015-7-30
-      if(self.album[imageNumber].name.length>10 || self.album[imageNumber].media.length>10 || self.album[imageNumber].name_e.length>30 || self.album[imageNumber].media_e.length>30){
-        hextension = 70;
-      }
-      else{
-        hextension = 50;
-      }
-
       this.disableKeyboardNav();
       var $image = this.$lightbox.find('.lb-image');
 
@@ -265,6 +257,18 @@
             }
           }
         }
+
+        //Hardy 2015-7-30
+        if(parseInt($image.width())<900 && (self.album[imageNumber].name.length>15 || self.album[imageNumber].media.length>15 || self.album[imageNumber].name_e.length>50 || self.album[imageNumber].media_e.length>50)){
+          hextension = 120;
+        }
+        else if(self.album[imageNumber].name.length>10 || self.album[imageNumber].media.length>10 || self.album[imageNumber].name_e.length>30 || self.album[imageNumber].media_e.length>30){
+          hextension = 70;
+        }
+        else{
+          hextension = 50;
+        }
+
         self.sizeContainer($image.width(), $image.height());
       };
 

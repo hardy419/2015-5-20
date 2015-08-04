@@ -420,7 +420,7 @@ h3.eng {
 }
 .lb-details td {
   vertical-align: top;
-  word-break: keep-all;
+/*  word-break: keep-all;*/
 /*  white-space: nowrap;*/
 }
 
